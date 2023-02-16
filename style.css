@@ -1,0 +1,18 @@
+.divider {
+  padding-block: 100vh;
+}
+
+.element {
+  block-size: 300px;
+  background: red;
+}
+
+@layer reset {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+}
