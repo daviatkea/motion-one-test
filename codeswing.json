@@ -1,5 +1,7 @@
 {
-  "scripts": [],
+  "scripts": [
+    "https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.2.7/undefined"
+  ],
   "styles": [],
   "layout": "splitLeft"
 }
