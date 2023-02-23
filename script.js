@@ -6,13 +6,10 @@ const mediaQueryList = window.matchMedia("(min-width: 1000px)");
 // Define a callback function for the event listener.
 function handleOrientationChange(evt) {
   if (evt.matches) {
-    inviewAnimation();
+    inviewDesktop();
   } else {
-    // setTimeout(() => {
-    //   inviewAnimation2();
-    // }, 100);
     requestAnimationFrame(() => {
-      inviewAnimation2();
+      inviewMobile();
     });
   }
 }
@@ -23,7 +20,7 @@ handleOrientationChange(mediaQueryList);
 // Add the callback function as a listener to the query list.
 mediaQueryList.addEventListener("change", handleOrientationChange);
 
-const inviewAnimation = () => {
+const inviewDesktop = () => {
   return inView(".mangeelementerinview", () => {
     animate(".mangeelementer1", { x: [-2000, 200] }, { duration: 2 });
     animate(".mangeelementer2", { x: [-1500, 0] }, { duration: 2 });
@@ -50,7 +47,7 @@ const inviewAnimation = () => {
   });
 };
 
-const inviewAnimation2 = () => {
+const inviewMobile = () => {
   return inView(".mangeelementerinview", () => {
     animate(".mangeelementer1", { x: [-2000, 200] }, { duration: 2 });
     animate(".mangeelementer2", { x: [-1500, 100] }, { duration: 2 });
